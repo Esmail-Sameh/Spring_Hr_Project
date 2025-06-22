@@ -19,6 +19,21 @@ public class EmployeeService {
 		return employeeRepo.findByFirstName(firstName);
 	}
 	
+	public List<EmployeeModel> empSeaech(String firstName){
+		return employeeRepo.empSearch(firstName);
+	}
+	
+	public EmployeeModel addEmp(EmployeeModel newEmp) {
+		return employeeRepo.save(newEmp);
+	}
+	
+	public EmployeeModel updateEmp(EmployeeModel newEmp) {
+		return employeeRepo.save(newEmp);
+	}
+	
+	public void deleteEmp(Long id){
+		employeeRepo.deleteById(id);
+	}
 
 	
 }

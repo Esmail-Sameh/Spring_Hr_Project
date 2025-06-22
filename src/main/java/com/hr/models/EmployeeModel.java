@@ -1,5 +1,6 @@
 package com.hr.models;
 
+import io.micrometer.common.lang.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,16 +12,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "employee")
 public class EmployeeModel {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
 	@Column(name = "first_name")
+	@Nullable
 	private String firstName;
 	
 	@Column(name = "last_name")
@@ -71,6 +71,20 @@ public class EmployeeModel {
 
 	public void setSalary(String salary) {
 		this.salary = salary;
+	}
+
+	public EmployeeModel(Long id, String firstName, String lastName, String address, String salary) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.salary = salary;
+	}
+
+	public EmployeeModel() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	
