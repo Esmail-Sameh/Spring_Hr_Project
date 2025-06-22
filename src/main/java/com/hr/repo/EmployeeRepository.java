@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.hr.models.EmployeeModel;
 
 @Repository
-public interface EmployeeRepo extends JpaRepository<EmployeeModel, Long> {
+public interface EmployeeRepository extends JpaRepository<EmployeeModel, Long> {
 
 	public List<EmployeeModel> findByFirstName(String firstName);
 	

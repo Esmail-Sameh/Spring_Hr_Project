@@ -4,12 +4,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.hr.models.EmployeeModel;
-import com.hr.repo.EmployeeRepo;
+import com.hr.repo.EmployeeRepository;
 
 @Service
 public class EmployeeService {
 	@Autowired
-	EmployeeRepo employeeRepo;
+	EmployeeRepository employeeRepo;
 	
 	public List<EmployeeModel> getAllData(){
 		return employeeRepo.findAll();
