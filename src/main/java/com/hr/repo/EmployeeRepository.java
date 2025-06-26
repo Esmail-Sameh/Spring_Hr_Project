@@ -16,5 +16,7 @@ public interface EmployeeRepository extends JpaRepository<EmployeeModel, Long> {
 	@Query("select emp from EmployeeModel emp where emp.firstName = :firstNameBind")
 	public List<EmployeeModel> empSearch(@Param("firstNameBind") String firstName);
 	
+	public List<EmployeeModel> findByDepartmentId(Long id);
+	
 }
 	

@@ -25,7 +25,6 @@ public class EmployeeModel {
 	@Column(name = "last_name")
 	private String lastName;
 	
-	
 	@Column(name = "address")
 	private String address;
 	
@@ -98,9 +97,5 @@ public class EmployeeModel {
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-
 	
-	
-	
-	
-}
+}		
